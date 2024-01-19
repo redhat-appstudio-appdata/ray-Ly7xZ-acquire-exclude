@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: scripts-kuberay
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/ray/scripts-kuberay@sha256:af9b6dc536ea7c40b0db8398b9ada4dc3f894ac6693e6c303b6e72265c1bdd22
+        name: my-python
+        resources: {}
+status: {}

@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: scripts-kuberay
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: scripts-kuberay
+    app.kubernetes.io/part-of: ray
+  name: scripts-kuberayt7lg
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: scripts-kuberay
+    weight: null
+status: {}
