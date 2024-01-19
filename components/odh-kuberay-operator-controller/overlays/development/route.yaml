@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: odh-kuberay-operator-controller
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: odh-kuberay-operator-controller
+    app.kubernetes.io/part-of: ray
+  name: odh-kuberay-operator-contxmlg
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: odh-kuberay-operator-controller
+    weight: 100
+status: {}

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: odh-kuberay-operator-controller
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/ray/odh-kuberay-operator-controller@sha256:26288c40d7ea8e8b3e255d9f6271140ac2c08215fedce0eae3e55a9ecc2af993
+        name: container-image
+        resources: {}
+status: {}
