@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: tests-kuberay
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: tests-kuberay
+    app.kubernetes.io/part-of: ray
+  name: tests-kuberaym2wr
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: tests-kuberay
+    weight: null
+status: {}
