@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: proto-kuberay
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/ray/proto-kuberay@sha256:4c4557c24461ecb825c2d148eae68efc3ba092ff6d8e1bf82abd0caf3a8d77bf
+        name: container-image
+        resources: {}
+status: {}
