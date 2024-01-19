@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: ray-operator-kuberay
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/ray/ray-operator-kuberay@sha256:6138142d9aca06ee092e4c19f5c969a5df8d625fecbdc5a4026d0672828f35e8
         imagePullPolicy: Always
         name: container-image
         ports:
