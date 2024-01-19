@@ -23,7 +23,7 @@ spec:
         app.kubernetes.io/instance: odh-kuberay-operator-controller
     spec:
       containers:
-      - image: image
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/ray/odh-kuberay-operator-controller@sha256:26288c40d7ea8e8b3e255d9f6271140ac2c08215fedce0eae3e55a9ecc2af993
         imagePullPolicy: Always
         name: container-image
         ports:
