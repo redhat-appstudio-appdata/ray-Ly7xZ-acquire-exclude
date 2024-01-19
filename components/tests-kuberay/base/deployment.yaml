@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: tests-kuberay
     spec:
       containers:
-      - image: python-image:latest
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/ray/tests-kuberay@sha256:069bf108ec4debfa30507538d657a7b312299346866db16d6a30322fc5ef12be
         name: my-python
         ports:
         - containerPort: 8081
