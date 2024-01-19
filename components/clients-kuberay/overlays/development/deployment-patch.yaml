@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: clients-kuberay
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rhoai-tenant/ray/clients-kuberay@sha256:47cdedabc5d33920c079a2be770f221fa4a7e59cedc008c12bd086e0b9efbc8d
+        name: my-python
+        resources: {}
+status: {}
